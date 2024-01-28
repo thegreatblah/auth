@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { defineComponent } from 'vue';
 
-const documents = [{filename: 'удостоверение'}]
+const documents = [{id: 1, filename: 'удостоверение'}]
 
 /*
 import { usePinia } from 'pinia';
