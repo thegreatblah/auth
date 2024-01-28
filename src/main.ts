@@ -12,7 +12,7 @@ import Documents from './components/Documents.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
-    { path: '/auth', component: Auth },
+    { path: '/', component: Auth },
     { path: '/documents', component: Documents },
 ]
 const router = createRouter({
