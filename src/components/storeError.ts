@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia';
 
-var timeout = null
+let timeout: number;
 export const useErrorStore = defineStore({
   id: 'error',
   state: () => ({
     error: '',
   }),
-  actions: {
+  actions: {    
     setError(errorMessage: string) {
       if (timeout) window.clearTimeout(timeout)
       this.error = errorMessage;

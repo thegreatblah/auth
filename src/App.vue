@@ -3,7 +3,7 @@
     <ErrorNotification />
 </template>
   
-<script>
+<script lang="ts">
 import ErrorNotification from './components/ErrorNotification.vue';
 export default {
     components: {

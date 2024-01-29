@@ -38,7 +38,7 @@ const loginUser = async () => {
     localStorage.setItem('refreshToken', refreshToken);
 
     router.push('/documents');
-  } catch (error) {
+  } catch (error: any) {
     console.error('Ошибка авторизации:', error);
     useErrorStore().setError(error.response ? error.response.data : error);
   }

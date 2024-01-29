@@ -5,7 +5,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { watch } from 'vue'
 import { useErrorStore } from './storeError';

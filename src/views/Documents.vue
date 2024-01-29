@@ -30,7 +30,7 @@ const router = useRouter();
 
 export default {
 setup() {    
-    const documents = ref([]);
+    const documents = ref<any>([]);
 
     axios.post('https://products.halyklife.kz/api/v1/test/insis/arm/api/File/List', {
         processInstanceId: '0370c1fd-3b3d-4974-a0cb-23e8ccc727cd'
@@ -39,7 +39,7 @@ setup() {
     })
 
 
-    const uploadFile = (event, index) => {
+    const uploadFile = (event: any, index: number) => {
         const file = event.target.files[0];
 
         const postData = {
