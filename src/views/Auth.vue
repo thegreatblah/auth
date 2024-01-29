@@ -13,15 +13,16 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
 //заглушка для axios так как api не авторизует
 import axios from '../components/axiosmock';
+
+import { useErrorStore } from '../components/storeError';
 
 import { useRouter } from 'vue-router';
 const router = useRouter();
 
-const login = ref('TESTVUE');
-const password = ref('qwerty');
+const login = ref('local');
+const password = ref('local');
 
 const loginUser = async () => {
   try {
@@ -39,6 +40,7 @@ const loginUser = async () => {
     router.push('/documents');
   } catch (error) {
     console.error('Ошибка авторизации:', error);
+    useErrorStore().setError(error.response ? error.response.data : error);
   }
 };
 </script>

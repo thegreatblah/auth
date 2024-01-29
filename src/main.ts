@@ -6,14 +6,13 @@ import App from './App.vue'
 import { createPinia } from 'pinia'
 const pinia = createPinia()
 
-//const Auth = { template: '<div>Auth</div>' }
 import Auth from './views/Auth.vue'
 import Documents from './views/Documents.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
     { path: '/auth', component: Auth },
-    { path: '/documents', component: Documents },
+    { path: '/documents', component: Documents }
 ]
 const router = createRouter({
     history: createWebHistory(),
