@@ -4,7 +4,7 @@
 </template>
   
 <script>
-import ErrorNotification from './components/Errornotification.vue';
+import ErrorNotification from './components/ErrorNotification.vue';
 export default {
     components: {
         ErrorNotification,
